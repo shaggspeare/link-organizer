@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import dbConnect from '@/app/lib/mongodb';
+import dbConnect from '@/lib/mongodb';
 import Link from '@/models/Link';
 
 export async function GET(request: NextRequest) {
@@ -9,7 +9,8 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const category = searchParams.get('category');
     const status = searchParams.get('status');
-    
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const query: any = {};
     if (category) query.category = category;
     if (status) query.status = status;

@@ -1,4 +1,4 @@
-import MasonryGrid from './components/MasonryGrid';
+import MasonryGrid from '../components/MasonryGrid';
 import { Sparkles } from 'lucide-react';
 
 export default function Home() {

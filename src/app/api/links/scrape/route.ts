@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import dbConnect from '@/app/lib/mongodb';
+import dbConnect from '@/lib/mongodb';
 import Link from '@/models/Link';
-import { WebScraper } from '@/app/lib/scraper';
-import { AIProcessor } from '@/app/lib/ai-processor';
+import { WebScraper } from '@/lib/scraper';
+import { AIProcessor } from '@/lib/ai-processor';
 import { z } from 'zod';
 
 const scrapeSchema = z.object({
